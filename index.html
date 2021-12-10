@@ -71,6 +71,16 @@
 
 
 
+<script>
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js');
+    });
+  }
+  </script>
+
 
 
   
@@ -400,6 +410,28 @@
         </div>
       </div> <!-- .container -->
     </div> <!-- .page-section -->
+
+
+
+    <div class="page-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="subhead">Video Juego</div>
+          <h2 class="title-section">¡Accede a Nuestro Nuevo Video Juego!</h2>
+        </div>
+<CENTER>
+        <div class="">
+          <div class="portfolio">
+            <a href="https://we.tl/t-wefvnzrApQ" >
+              <img src="./assets/img/portfolio/vg.png" alt="">
+            </a>
+          </div>
+        </div>
+
+      </CENTER>
+      </div> <!-- .container -->
+    </div> <!-- .page-section -->
+   
 
   
 

@@ -27,15 +27,7 @@
   <link rel="manifest" href="../manifest.json">
 
 
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-<script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "3108e03c-8eeb-4037-9c97-a324d011549b",
-    });
-  });
-</script>
+  
 
 
   <link rel="stylesheet" href="../assets/css/bootstrap.css">
@@ -49,6 +41,28 @@
   <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
 
   <link rel="stylesheet" href="../assets/css/theme.css">
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "3108e03c-8eeb-4037-9c97-a324d011549b",
+    });
+  });
+</script>
+
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../service-worker.js');
+      });
+    }
+    </script>
+
 
 </head>
 <body>
