@@ -76,7 +76,7 @@
   if ('serviceWorker' in navigator) {
     // Use the window load event to keep the page load performant
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./service-worker.js');
+      navigator.serviceWorker.register('./sw.js');
     });
   }
   </script>
@@ -611,8 +611,7 @@
 <script src="./assets/js/google-maps.js"></script>
 
 <script src="./assets/js/theme.js"></script>
-<script src="./script.js"></script>
-
+<!-- <script src="./script.js"></script>-->
 
 
 <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script> -->
